@@ -1,12 +1,9 @@
 {
-  "name": "mernstackpractice",
+  "name": "ticket-triage",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "description": "Support-ticket triage: Naive Bayes classification, priority scoring, entity extraction and suggested replies - zero dependencies",
+  "main": "src/server.js",
+  "scripts": { "start": "node src/server.js", "test": "node --test" },
+  "engines": { "node": ">=18" },
+  "license": "Apache-2.0"
 }

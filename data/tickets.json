@@ -1,0 +1,242 @@
+[
+ {
+  "text": "I was charged twice for my subscription this month",
+  "category": "billing"
+ },
+ {
+  "text": "Please refund my last payment",
+  "category": "billing"
+ },
+ {
+  "text": "My invoice shows the wrong amount",
+  "category": "billing"
+ },
+ {
+  "text": "The payment failed and I need to update my credit card",
+  "category": "billing"
+ },
+ {
+  "text": "I want to cancel and get my money back",
+  "category": "billing"
+ },
+ {
+  "text": "The discount code was not applied at checkout",
+  "category": "billing"
+ },
+ {
+  "text": "Why was I billed 49 dollars when the plan costs 29?",
+  "category": "billing"
+ },
+ {
+  "text": "I need a copy of last year's invoice for taxes",
+  "category": "billing"
+ },
+ {
+  "text": "My card was declined but I still got charged",
+  "category": "billing"
+ },
+ {
+  "text": "Can you change the billing email address?",
+  "category": "billing"
+ },
+ {
+  "text": "There is an unknown charge on my statement",
+  "category": "billing"
+ },
+ {
+  "text": "The upgrade proration looks wrong on my bill",
+  "category": "billing"
+ },
+ {
+  "text": "The app crashes when I open the settings page",
+  "category": "bug"
+ },
+ {
+  "text": "The export button does nothing and shows an error",
+  "category": "bug"
+ },
+ {
+  "text": "I get a 500 error when uploading a file",
+  "category": "bug"
+ },
+ {
+  "text": "The page freezes after I click save",
+  "category": "bug"
+ },
+ {
+  "text": "Notifications are not showing up on my phone",
+  "category": "bug"
+ },
+ {
+  "text": "Search returns no results even though the item exists",
+  "category": "bug"
+ },
+ {
+  "text": "Dark mode makes the text unreadable in the editor",
+  "category": "bug"
+ },
+ {
+  "text": "The dashboard keeps loading forever",
+  "category": "bug"
+ },
+ {
+  "text": "I see an error message saying something went wrong when I sync",
+  "category": "bug"
+ },
+ {
+  "text": "Images fail to load on the profile page",
+  "category": "bug"
+ },
+ {
+  "text": "The mobile app logs me out randomly",
+  "category": "bug"
+ },
+ {
+  "text": "Copy and paste stopped working in the editor",
+  "category": "bug"
+ },
+ {
+  "text": "How do I invite a teammate to my workspace?",
+  "category": "how_to"
+ },
+ {
+  "text": "Where can I find the API documentation?",
+  "category": "how_to"
+ },
+ {
+  "text": "How can I export my data to CSV?",
+  "category": "how_to"
+ },
+ {
+  "text": "What is the way to set up the integration with Slack?",
+  "category": "how_to"
+ },
+ {
+  "text": "How do I change the language of the interface?",
+  "category": "how_to"
+ },
+ {
+  "text": "Is there a guide for connecting my calendar?",
+  "category": "how_to"
+ },
+ {
+  "text": "How can I create a recurring report?",
+  "category": "how_to"
+ },
+ {
+  "text": "Where do I download the desktop app?",
+  "category": "how_to"
+ },
+ {
+  "text": "How do I merge two projects?",
+  "category": "how_to"
+ },
+ {
+  "text": "Can you explain how roles and permissions work?",
+  "category": "how_to"
+ },
+ {
+  "text": "How do I schedule a message to send later?",
+  "category": "how_to"
+ },
+ {
+  "text": "What steps are needed to import contacts from a spreadsheet?",
+  "category": "how_to"
+ },
+ {
+  "text": "I forgot my password and the reset email never arrives",
+  "category": "account"
+ },
+ {
+  "text": "Please delete my account and all my data",
+  "category": "account"
+ },
+ {
+  "text": "I cannot log in because my account is locked",
+  "category": "account"
+ },
+ {
+  "text": "How do I change the email address on my account?",
+  "category": "account"
+ },
+ {
+  "text": "Someone else accessed my account and I need to secure it",
+  "category": "account"
+ },
+ {
+  "text": "My account was suspended without explanation",
+  "category": "account"
+ },
+ {
+  "text": "I want to transfer ownership of my workspace",
+  "category": "account"
+ },
+ {
+  "text": "My two factor codes are not accepted when I log in",
+  "category": "account"
+ },
+ {
+  "text": "I need to merge my two accounts into one",
+  "category": "account"
+ },
+ {
+  "text": "I cannot verify my email because the link has expired",
+  "category": "account"
+ },
+ {
+  "text": "Please remove a former employee from our team account",
+  "category": "account"
+ },
+ {
+  "text": "Single sign on login fails with our company directory",
+  "category": "account"
+ },
+ {
+  "text": "It would be great to have a dark theme option",
+  "category": "feature_request"
+ },
+ {
+  "text": "Please add an integration with Microsoft Teams",
+  "category": "feature_request"
+ },
+ {
+  "text": "Can you support exporting to PDF in a future release?",
+  "category": "feature_request"
+ },
+ {
+  "text": "I would love keyboard shortcuts for common actions",
+  "category": "feature_request"
+ },
+ {
+  "text": "We need bulk editing for multiple items at once",
+  "category": "feature_request"
+ },
+ {
+  "text": "Add an option to schedule reports automatically",
+  "category": "feature_request"
+ },
+ {
+  "text": "It would be nice to have offline mode on mobile",
+  "category": "feature_request"
+ },
+ {
+  "text": "Please add support for custom fields",
+  "category": "feature_request"
+ },
+ {
+  "text": "A calendar view would help our planning",
+  "category": "feature_request"
+ },
+ {
+  "text": "Allow commenting directly on tasks please",
+  "category": "feature_request"
+ },
+ {
+  "text": "Suggestion: add undo for deleted items",
+  "category": "feature_request"
+ },
+ {
+  "text": "Could you add two level approvals for requests?",
+  "category": "feature_request"
+ }
+]

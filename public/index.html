@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ticket Triage</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--line:#e1e4ee;--text:#161a26;--muted:#667085;--accent:#3b5bdb}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#161922;--line:#262b38;--text:#e6e8ee;--muted:#8b92a5;--accent:#7c9cff}}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 system-ui,sans-serif}main{max-width:760px;margin:0 auto;padding:32px 20px}
+h1{margin:0 0 4px}p.sub{color:var(--muted);margin:0 0 20px}textarea{width:100%;min-height:110px;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit;box-sizing:border-box}
+button{margin-top:10px;padding:10px 18px;border:0;border-radius:10px;background:var(--accent);color:#fff;font:inherit;font-weight:600;cursor:pointer}
+.card{margin-top:18px;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--card)}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.pill{padding:3px 12px;border-radius:99px;font-weight:600;font-size:13px;border:1px solid var(--line)}.P1{background:#ffe3e3;color:#c92a2a}.P2{background:#fff0d6;color:#b05f00}.P3{background:#e7f5ff;color:#1c7ed6}.P4{background:#ebfbee;color:#2b8a3e}
+.bar{height:8px;border-radius:5px;background:var(--line);overflow:hidden;margin:3px 0 8px}.bar i{display:block;height:100%;background:var(--accent)}small{color:var(--muted)}
+</style></head><body><main>
+<h1>Ticket Triage</h1><p class="sub">Paste a support message - get category, priority, entities and a draft reply.</p>
+<textarea id="t" placeholder="e.g. I was charged twice ($49) for invoice INV-2041 and I need a refund ASAP!"></textarea>
+<button id="go">Triage</button><div id="out"></div>
+<script>
+const out=document.getElementById('out');
+function el(tag,cls,text){const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e}
+document.getElementById('go').onclick=async()=>{
+  const text=document.getElementById('t').value.trim();if(!text)return;
+  const r=await fetch('/triage',{method:'POST',body:JSON.stringify({text})});const d=await r.json();out.textContent='';
+  const card=el('div','card');const row=el('div','row');
+  row.append(el('span','pill',d.category.replace('_',' ')),el('span','pill '+d.priority.level,d.priority.level),el('small','','confidence '+Math.round(d.confidence*100)+'%'+(d.needsHuman?' - needs a human look':'')));
+  card.append(row);
+  d.alternatives.forEach(a=>{card.append(el('small','',a.category+' '+Math.round(a.probability*100)+'%'));const b=el('div','bar');const i=el('i');i.style.width=a.probability*100+'%';b.append(i);card.append(b)});
+  card.append(el('small','','Why this priority: '+(d.priority.reasons.join(', ')||'no urgency signals')));
+  const ents=Object.entries(d.entities).filter(([,v])=>v.length).map(([k,v])=>k+': '+v.join(', ')).join('  |  ');
+  if(ents)card.append(el('div','',''),el('small','','Found - '+ents));
+  card.append(el('h3','','Suggested reply'),el('div','',d.suggestedReply));out.append(card)};
+</script></main></body></html>
